@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar{
+    width: 250px;
+    background-color: #27DDF5;
+    color: white;
+    padding: 20px;
+}
+
+.item{
+    background-color: #2776F5;
+    margin-left: 30px;
+}
+
+.Head{
+    background-color: #3F27F5;
+    margin-left: 15px;
+}
