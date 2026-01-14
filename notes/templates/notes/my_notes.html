@@ -18,6 +18,7 @@
             <li><a href="{% url 'polls:index'%}">Polls</a></li>
             <li><a href="{% url 'about_us'%}">About</a></li>
             <li><a href="{% url 'create' %}"><button class = "btn btn-info"> Add article </button></a></li>
+            <li><a href="{% url 'create_note' %}"><button class = "btn btn-info"> Add note </button></a></li>
         </ul>
     </aside>
 
@@ -29,6 +30,9 @@
                 <h3>{{ el.title }}</h3>
                 <p> {{ el.text }} </p>
                 <p> Remind me on {{ el.reminder }} </p>
+                <a href="{% url 'update' el.id %}"><button type="submit"> Edit </button></a>
+                <a href="{% url 'delete' el.id %}"><button type="submit"> Delete </button></a>
+
             </div>
         {% endfor %}
         {% else %}

@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'about/create.css' %}">
+</head>
+<body>
+    <div class = "features">
+          <h1> Form for adding notes</h1>
+          <form method="post" class = 'forms_form'>
+             {% csrf_token %}
+             {{ form.title }}
+              {{ form.text }}
+              {{ form.reminder }}
+              {{ form.category }}
+              <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit"> Add article</button>
+          </form>
+    </div>
+</body>
+</html>
