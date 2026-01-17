@@ -1,16 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'notes/layout.html'%}
+{% load static %}
+
+{% block content %}
     <h1> Are you sure that you want to delete this note? </h1>
     <form method="post">
         {% csrf_token %}
         <button type="submit"> Yes </button>
     </form>
     <a href="/"><button> No </button></a>
+{% endblock %}
 
-</body>
-</html>
+{% block title %}
+    Delete note
+{% endblock %}

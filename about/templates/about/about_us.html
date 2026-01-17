@@ -1,14 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>About</title>
-</head>
+{% extends 'notes/layout.html'%}
+{% load static %}
 
-<body>
+{% block content %}
     <h1 style="text-align: center"> News </h1>
     {% if news %}
     {% for el in news %}
@@ -21,5 +14,8 @@
     {% else %}
         <p> There is nothing to see here </p>
     {% endif %}
-</body>
-</html>
+{% endblock %}
+
+{% block title %}
+    News
+{% endblock %}

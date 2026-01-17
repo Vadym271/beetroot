@@ -1,12 +1,11 @@
-.container {
-    display: flex;
-    height: 100vh;
+.main{
+   background-color: #27CCF5;
 }
 
 .sidebar{
-    width: 250px;
-    background-color: #27DDF5;
-    color: white;
+    width: 300px;
+    background-color: #27F5B7;
+    color: blue;
     padding: 20px;
 }
 
@@ -18,4 +17,9 @@
 .Head{
     background-color: #3F27F5;
     margin-left: 15px;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
 }

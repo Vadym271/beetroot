@@ -1,12 +1,7 @@
+{% extends 'notes/layout.html'%}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="{% static 'about/create.css' %}">
-</head>
-<body>
+
+{% block content %}
     <div class = "features">
           <h1> Form for writing articles</h1>
           <form method="post" class = 'forms_form'>
@@ -19,5 +14,8 @@
             <button class="btn btn-success" type="submit"> Add article</button>
           </form>
     </div>
-</body>
-</html>
+{% endblock %}
+
+{% block title %}
+    Create article
+{% endblock %}

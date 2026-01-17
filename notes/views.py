@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from .models import Note
 from .forms import NoteForm
 from django.views.generic import UpdateView, DeleteView
+from django.forms import ModelForm, TextInput, DateTimeInput, Textarea
+
 
 # Create your views here.
 
@@ -29,7 +31,7 @@ def create_note(request):
 class NoteUpdate(UpdateView):
     model = Note
     template_name = 'notes/create.html'
-    fields = ['title', 'text', 'reminder', 'category']
+    form_class = NoteForm
 
 class NoteDelete(DeleteView):
     model = Note

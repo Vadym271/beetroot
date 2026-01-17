@@ -36,7 +36,7 @@ class NewsUpdateView(UpdateView):
     model = Article
     template_name = 'about/create.html'
 
-    fields = ['title', 'anons', 'full_text', 'date']
+    form_class = ArticleForm
 
 
 class NewsDeleteView(DeleteView):
