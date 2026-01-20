@@ -9,9 +9,10 @@
                 <h3>{{ el.title }}</h3>
                 <p> {{ el.text }} </p>
                 <p> Remind me on {{ el.reminder }} </p>
-                <a href="{% url 'update' el.id %}"><button type="submit"> Edit </button></a>
-                <a href="{% url 'delete' el.id %}"><button type="submit"> Delete </button></a>
-
+                {% if user.is_authenticated %}
+                    <a href="{% url 'update' el.id %}"><button type="submit"> Edit </button></a>
+                    <a href="{% url 'delete' el.id %}"><button type="submit"> Delete </button></a>
+                {% endif %}
             </div>
         {% endfor %}
         {% else %}
